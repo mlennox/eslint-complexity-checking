@@ -1,2 +1,2 @@
-# eslint-complexity-checking
-Use eslint to check the complexity of your code
+# Keeping a lid on your code complexity with eslint
+
