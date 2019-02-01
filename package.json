@@ -1,0 +1,26 @@
+{
+  "name": "eslint-complexity-checking",
+  "version": "1.0.0",
+  "description": "demonstrate eslint file complexity checking",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlennox/eslint-complexity-checking.git"
+  },
+  "keywords": [
+    "eslint",
+    "es6",
+    "javascript",
+    "lint",
+    "complexity"
+  ],
+  "author": "Mark Lennox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mlennox/eslint-complexity-checking/issues"
+  },
+  "homepage": "https://github.com/mlennox/eslint-complexity-checking#readme"
+}
