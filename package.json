@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:complex": "eslint . -c eslint.complexity.config.js -f ./formatter/sorted.js"
+    "lint:sorted": "eslint . -c ./formatter/eslint.complexity.config.js -f ./formatter/sorted.js"
   },
   "repository": {
     "type": "git",

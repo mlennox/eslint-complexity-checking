@@ -14,7 +14,7 @@ module.export = {
   },
   eslintIgnore: ['formatter/*.js'],
   rules: {
-    complexity: ['warn', 5],
+    'complexity': ['warn', 5],
     'max-params': ['warn', 4],
     'max-statements': ['warn', 7],
     'max-statements-per-line': [

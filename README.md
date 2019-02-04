@@ -7,11 +7,14 @@ This repo accompanies a blog post at [www.webpusher.ie/]().
 The example project highlights eslint config that warns the coder of complexity issues such as:
 
 - cyclomatic complexity
-- file length
-- excessive params in functions
 - too many statements per function
 - too many statements per line
-- 
+- excessive params in functions
+- number of nested callbacks
+- nesting in code blocks
+- file length
+
+Code that has any of these issues can be harder to maintain and understand, so it is worthwhile taking a little time to refactor, reduce and remove unwanted complexity. You need to recognise it first!
 
 ## Pre-requisites
 
@@ -23,7 +26,7 @@ You should be able to get started simply by running:
 
 ```javascript
 npm install
-npm run lint:complex
+npm run lint:sorted
 ```
 
 This will generate an output as below
@@ -36,7 +39,7 @@ The output has sorted the files, placing those that contain the most errors and/
 
 ## Cyclomatic weighting
 
-The cyclomatic complexity of a file is considered more important than other problems so it adds a boost to the weighting of a particular file when it is sorted. The complexity is a measure of the independent paths through a piece of code. The measure is divided by four and added to the error or warning count.
+The cyclomatic complexity is a measure of the independent paths through a piece of code. The measure is divided by four and added to the error or warning count before being evaluated when sorting the list of problematic files.
 
 This is why, in the example, the file `cyclomatic.example.js` with only a single cyclomatic warning is listed above the file `notsobad.example.js` which has 3 warnings. None of the 3 warnings in `notsobad.example.js` are due to cyclomatic complexity so they are relatively less important when you consider the entire codebase.
 
@@ -48,7 +51,7 @@ Line 6 : Method 'init' has a complexity of 9.
 Line 30 : Method 'wiggleIt' has a complexity of 15.
 ```
 
-They both will contribute extra weighting to the file, ensuring it will appear at the top of the list of problem files.
+They both will contribute extra weighting to the file - `9 / 4 = 3` and `15 / 4 = 4` for a total of 7 added to the warning count - ensuring it will appear at the top of the list of problem files.
 
 ## Why aren't all the files listed
 
