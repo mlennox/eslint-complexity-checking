@@ -33,7 +33,7 @@ module.exports = {
       }
     ],
     "max-nested-callbacks": [
-      "warn",
+      "error",
       2
     ],
     "max-depth": [

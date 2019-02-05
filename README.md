@@ -31,7 +31,12 @@ npm run lint:sorted
 
 This will generate an output as below
 
-![](./eslint-sorted-example.png)
+![](./eslint.sorted.png)
+
+This is compared to the standard output that sorts the files alphabetically and outputs the rule violations in the order they occur in each file.
+
+![](./eslint.standard.png)
+
 
 ## What does it all mean?
 
@@ -41,7 +46,7 @@ The output has sorted the files, placing those that contain the most errors and/
 
 The cyclomatic complexity is a measure of the independent paths through a piece of code. The measure is divided by four and added to the error or warning count before being evaluated when sorting the list of problematic files.
 
-This is why, in the example, the file `cyclomatic.example.js` with only a single cyclomatic warning is listed above the file `notsobad.example.js` which has 3 warnings. None of the 3 warnings in `notsobad.example.js` are due to cyclomatic complexity so they are relatively less important when you consider the entire codebase.
+This is why, in the example, the file `c.cyclomatic.js` with only a single cyclomatic error is listed above the file `a.notsobad.js` which has 3 warnings. None of the 3 warnings in `notsobad.example.js` are due to cyclomatic complexity so they are relatively less important when you consider the entire codebase.
 
 For the example above, the file `bad.example.js` has two instances of excessive cyclomatic complexity.
 

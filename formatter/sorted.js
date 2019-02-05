@@ -5,10 +5,13 @@ const groupMessages = require('./groupMessages');
 module.exports = results => {
   const sorted = results.sort(errorSorter);
 
-  const renderHeadline = result => `${col.boldBlack}${result.filePath}
-${col.boldBlack}${'='.repeat(result.filePath.length)}
+  const renderHeadline = result => {
+    const trimmedFilePath = result.filePath.replace(process.env.PWD || '', '');
+    return `${col.boldBlack}${trimmedFilePath}
+${col.boldBlack}${'='.repeat(trimmedFilePath.length)}
 ${col.boldRed}errors: ${col.red}${result.errorCount}
 ${col.boldYellow}warnings: ${col.yellow}${result.warningCount}\n\n`;
+  }
 
   const renderMessage = (errorLabel, messages) => `${col.boldBlack}${errorLabel}
 ${messages.join('\n')}

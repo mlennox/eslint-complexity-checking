@@ -28,7 +28,7 @@ module.exports = {
             }
         ],
         "complexity": [
-            "warn",
+            "error",
             5
         ],
         "max-params": ["warn", 4],
@@ -43,7 +43,7 @@ module.exports = {
             }
         ],
         "max-nested-callbacks": [
-            "warn",
+            "error",
             2
         ],
         "max-depth": [
