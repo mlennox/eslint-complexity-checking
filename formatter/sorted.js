@@ -19,7 +19,7 @@ ${col.reset}\n`;
 
   let report = '';
   sorted
-    // remove any results tat reported no issues
+    // remove any results that reported no issues
     .filter(result => result.errorCount > 0 || result.warningCount > 0)
     .forEach(result => {
       report += renderHeadline(result);
