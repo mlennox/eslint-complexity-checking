@@ -5,7 +5,7 @@ module.exports = (a, b) => {
   };
 
   const errorComparison = compare(weights.a.errorWeight, weights.b.errorWeight);
-  const warningComparison = compare(weights.a.errorWeight, weights.b.errorWeight);
+  const warningComparison = compare(weights.a.warningWeight, weights.b.warningWeight);
 
   return errorComparison !== 0 ? errorComparison : warningComparison;
 };

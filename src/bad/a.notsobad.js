@@ -1,9 +1,7 @@
 export default things => {
   return things.map(thing => {
     return thing.metadata.map(meta => {
-      return meta.props
-        .filter(property => property.sliced)
-        .map(property => dash(property.fix, property.tip, thing.spike, thing.plant, things.brush));
+      return meta.props.map(property => dash(property.fix, property.tip, thing.spike, thing.plant, things.brush));
     });
   });
 };
