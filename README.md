@@ -1,6 +1,6 @@
 # Find the most complex code using eslint
 
-This repo accompanies a blog post at [www.webpusher.ie/]().
+This repo accompanies a small article on my blog at https://www.webpusher.ie/2019/02/01/eslint-complexity/
 
 ## Intention
 
