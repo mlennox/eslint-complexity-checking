@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:sorted": "eslint  . -c ./formatter/eslint.complexity.config.js -f ./formatter/sorted.js || true"
+    "lint:sorted": "eslint  . -c ./formatter/eslint.complexity.config.js -f ./formatter/sorted.js || true",
+    "complex": "eslint -f complexity . "
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,13 @@
     "url": "https://github.com/mlennox/eslint-complexity-checking/issues"
   },
   "homepage": "https://github.com/mlennox/eslint-complexity-checking#readme",
+  "dependencies": {
+    "eslint": "^5.16.0"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "5.13.0",
     "eslint-config-prettier": "^4.0.0",
+    "eslint-formatter-complexity": "^1.0.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "3.0.1",
     "prettier": "1.16.3"

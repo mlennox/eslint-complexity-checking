@@ -1,8 +1,12 @@
 const col = require('./console.colours');
 const errorSorter = require('./errorSorter');
 const groupMessages = require('./groupMessages');
+const checkRules = require('./checkRules');
 
-module.exports = results => {
+module.exports = (results, { rulesMeta }) => {
+  if (!checkRules(rulesMeta)) {
+    return "not matched"
+  }
   const sorted = results.sort(errorSorter);
 
   const renderHeadline = result => {
