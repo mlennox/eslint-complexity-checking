@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:sorted": "eslint  . -c ./formatter/eslint.complexity.config.js -f ./formatter/sorted.js || true",
-    "complex": "eslint -f complexity . "
+    "complex": "eslint -f complexity . ",
+    "precommit": "npx pull-request-size-reminder",
+    "prepush": "npx pull-request-size-reminder"
   },
   "repository": {
     "type": "git",
@@ -31,9 +33,11 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint-config-prettier": "^4.0.0",
-    "eslint-formatter-complexity": "^1.0.1",
+    "eslint-formatter-complexity": "^1.0.3",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "3.0.1",
-    "prettier": "1.16.3"
+    "husky": "^2.3.0",
+    "prettier": "1.16.3",
+    "pull-request-size-reminder": "^1.0.6"
   }
 }
